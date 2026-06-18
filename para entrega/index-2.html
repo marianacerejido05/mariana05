@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>NEURO · Futuro en cada trago</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Google Fonts: tipografía moderna similar a Porsche/Tesla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Estilos CSS -->
+    <link href="css/styles.css?v=5" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ============================================================
+    NAVBAR — Glassmorphism con blur y borde sutil
+    ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a class="nav-logo" href="#">NEURO</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#uso">Experiencia</a></li>
+                <li><a href="#features">Tecnología</a></li>
+                <li><a href="#specs">Especificaciones</a></li>
+                <li><a href="#cta" class="nav-cta">Reservar</a></li>
+            </ul>
+            <!-- Hamburger para mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+    HERO — Imagen de fondo fullscreen + contenido superpuesto
+    ============================================================ -->
+    <section class="hero" id="hero">
+        <!-- Imagen de fondo -->
+        <div class="hero-bg">
+            <img src="assets/img/gpt.png" alt="NEURO GPT Visual" />
+        </div>
+
+        <!-- Overlay oscuro para legibilidad -->
+        <div class="hero-overlay"></div>
+
+        <!-- Partículas de fondo (canvas) -->
+        <canvas id="particles-canvas"></canvas>
+
+        <div class="hero-inner">
+            <!-- Lado izquierdo: texto -->
+            <div class="hero-text">
+                <span class="hero-badge" data-reveal>Lanzamiento 2026</span>
+                <h1 data-reveal>
+                    El futuro<br/>
+                    <span class="text-accent">es ahora.</span>
+                </h1>
+                <p data-reveal>
+                    Inteligencia artificial de vanguardia. Diseño futurista.
+                    Creado para quienes transforman lo imposible en realidad.
+                </p>
+                <div class="hero-actions" data-reveal>
+                    <a href="#features" class="btn-primary">Explorar</a>
+                    <a href="#specs" class="btn-outline">Ver specs</a>
+                </div>
+            </div>
+
+            <!-- Lado derecho: escena decorativa 3D sutil -->
+            <div class="hero-scene" id="hero-scene">
+                <div class="scene-3d" id="scene-3d">
+                    <div class="scene-glow"></div>
+                    <div class="scene-ring ring-1"></div>
+                    <div class="scene-ring ring-2"></div>
+                    <div class="scene-reflection"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <span>Desliza</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    USO — Cómo usar NEURO
+    ============================================================ -->
+    <section class="uso" id="uso">
+        <div class="container">
+            <div class="uso-grid">
+                <div class="uso-image" data-reveal>
+                    <img src="assets/img/uso termo.jpeg" alt="NEURO — Modo de uso" />
+                    <div class="uso-image-glow"></div>
+                </div>
+                <div class="uso-content" data-reveal>
+                    <span class="section-tag">Experiencia</span>
+                    <h2>Diseñado para tu <span class="text-accent">día a día</span>.</h2>
+                    <p class="uso-desc">
+                        Cada detalle de NEURO está pensado para integrarse a tu rutina. 
+                        Desde la tapa de apertura hidráulica hasta la base antideslizante, 
+                        cada interacción fue diseñada para ser intuitiva y satisfactoria.
+                    </p>
+                    <ul class="uso-list">
+                        <li>
+                            <span class="uso-list-icon">⟳</span>
+                            <div>
+                                <strong>Apertura hidráulica</strong>
+                                <span>Una mano, sin esfuerzo. Mecanismo de giro suave con amortiguación.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="uso-list-icon">⊡</span>
+                            <div>
+                                <strong>Base universal</strong>
+                                <span>Compatible con portavasos estándar. Superficie de silicona antideslizante.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="uso-list-icon">↥</span>
+                            <div>
+                                <strong>Llenado inteligente</strong>
+                                <span>Marcador de nivel interno. Apertura ancha para hielo y limpieza.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FEATURES — Tarjetas con glassmorphism y reveal al hacer scroll
+    ============================================================ -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">Tecnología</span>
+                <h2>Diseñado sin <span class="text-accent">compromiso</span>.</h2>
+                <p>Cada componente fue desarrollado para superar los estándares de la industria.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card glass" data-reveal data-delay="0">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Construcción monolítica</h3>
+                    <p>Fabricado en titanio grado 5 con cámara de vacío de triple pared. Sin soldaduras, sin puntos débiles.</p>
+                </div>
+
+                <div class="feature-card glass" data-reveal data-delay="100">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Retención extrema</h3>
+                    <p>24 horas para líquidos calientes, 48 para fríos. Pruebas en laboratorio certificadas bajo norma ISO.</p>
+                </div>
+
+                <div class="feature-card glass" data-reveal data-delay="200">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h3>Ergonomía cinética</h3>
+                    <p>Diseño biomimético que se adapta a la curvatura natural de la mano. Superficie con microtextura antideslizante.</p>
+                </div>
+
+                <div class="feature-card glass" data-reveal data-delay="300">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Neutro en carbono</h3>
+                    <p>Producido con energía 100% renovable. Cada unidad incluye compensación de huella de carbono certificada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SPECS — Sección de especificaciones con diseño de datos
+    ============================================================ -->
+    <section class="specs" id="specs">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">Especificaciones</span>
+                <h2>Precisión <span class="text-accent">absoluta</span>.</h2>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-card glass" data-reveal>
+                    <span class="spec-number">01</span>
+                    <h4>Capacidad</h4>
+                    <p class="spec-value-lg">750 ml</p>
+                    <p class="spec-desc">Volumen útil con cámara de expansión</p>
+                </div>
+                <div class="spec-card glass" data-reveal>
+                    <span class="spec-number">02</span>
+                    <h4>Peso</h4>
+                    <p class="spec-value-lg">320 g</p>
+                    <p class="spec-desc">Estructura de titanio ultraliviana</p>
+                </div>
+                <div class="spec-card glass" data-reveal>
+                    <span class="spec-number">03</span>
+                    <h4>Material</h4>
+                    <p class="spec-value-lg">Ti-6Al-4V</p>
+                    <p class="spec-desc">Titanio grado 5 con recubrimiento cerámico</p>
+                </div>
+                <div class="spec-card glass" data-reveal>
+                    <span class="spec-number">04</span>
+                    <h4>Aislamiento</h4>
+                    <p class="spec-value-lg">10<sup>-6</sup> torr</p>
+                    <p class="spec-desc">Cámara de vacío con pared reflectiva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CTA — Llamado a la acción final con efecto parallax
+    ============================================================ -->
+    <section class="cta" id="cta">
+        <div class="cta-bg-overlay"></div>
+        <div class="container cta-content" data-reveal>
+            <span class="section-tag">Edición limitada</span>
+            <h2>El próximo ícono.<br/>Reservá el tuyo.</h2>
+            <p>Primera producción limitada a 2.026 unidades. Cada una numerada y certificada.</p>
+            <a href="#" class="btn-primary btn-large">Reservar ahora</a>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-copy">© 2026 NEURO — Diseñado en Argentina.</p>
+            <div class="footer-links">
+                <a href="#">Instagram</a>
+                <a href="#">Términos</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
